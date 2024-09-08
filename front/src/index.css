@@ -1,0 +1,70 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  transition: background-color 0.5s ease;
+  /* Smooth transition for background color */
+  color: #333;
+}
+
+/* Container */
+div {
+  text-align: center;
+  padding: 40px;
+  max-width: 90vw;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Semi-transparent white background */
+  transition: background-color 0.5s ease;
+}
+
+/* Image */
+img {
+  max-width: 100%;
+  max-height: 50vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* Soft shadow around the image */
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+/* Text */
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #ffffff;
+  transition: color 0.5s ease;
+  text-shadow: 1px 1px 2px rgba(58, 58, 58, 0.495);
+}
+
+/* Hover and Click Effects */
+div:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Lighten background on hover */
+}
+
+p:hover {
+  color: #222;
+  /* Darken text color on hover */
+}
