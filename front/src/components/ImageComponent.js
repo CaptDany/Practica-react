@@ -6,7 +6,9 @@ const ImageComponent = ({ refreshTrigger }) => {
 
   const fetchImage = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/data");
+      const response = await axios.get(
+        "https://practica-react.onrender.com/api/data"
+      );
       setImageUrl(response.data.imageUrl);
     } catch (error) {
       console.error("Error fetching image:", error);
