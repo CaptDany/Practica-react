@@ -1,5 +1,5 @@
 {
-  "homepage": "https://captdany.github.io/Practica-react",
+  "homepage": "https://captdany.github.io/Practica-react/home",
   "name": "front",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b deploy-example",
+    "deploy": "gh-pages -d build -b deploy",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
