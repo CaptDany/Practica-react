@@ -1,5 +1,8 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
+const mongoURI = process.env.MONGO_URI;
 const cors = require("cors");
 const ImageData = require("./models/ImageData");
 
@@ -7,7 +10,7 @@ const app = express();
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/imageDatabase", {
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
