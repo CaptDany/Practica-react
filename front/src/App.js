@@ -3,6 +3,7 @@ import ImageComponent from "./components/ImageComponent";
 import PhraseComponent from "./components/PhraseComponent";
 
 const App = () => {
+  //useState stuff
   const [bgColor, setBgColor] = useState("#ffffff");
   const [refreshTrigger, setRefreshTrigger] = useState(0); // Used to trigger a refresh in the child components
 
