@@ -2,4 +2,5 @@
 /back/node_modules
 /front/node_modules
 /front/build
+back/.env
 /back/build

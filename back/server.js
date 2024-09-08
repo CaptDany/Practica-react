@@ -10,15 +10,24 @@ const app = express();
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB Atlas");
+  })
+  .catch((err) => {
+    console.error("Error connecting to MongoDB Atlas:", err);
+  });
 
 // API Route to fetch random image and phrase
 app.get("/api/data", async (req, res) => {
   try {
-    const data = await ImageData.aggregate([{ $sample: { size: 1 } }]); // Random document
+    const data = await ImageData.aggregate([{ $sample: { size: 1 } }]);
     res.json(data[0]);
   } catch (error) {
     res.status(500).send("Error fetching data");
