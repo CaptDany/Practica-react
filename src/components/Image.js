@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Image() {
+function Image(rr) {
   const imageArray = [
     "https://distritt.com/wp-content/uploads/2022/06/karely-ruiz-819x1024.jpg",
     "https://th.bing.com/th/id/R.79309b751fc01736ea1cc3d786b25651?rik=rurHNX620eLm%2fA&pid=ImgRaw&r=0",
