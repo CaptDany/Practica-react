@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,20 +17,13 @@ code {
 }
 
 .image-container {
+  width: 50%; /* Acomoda el ancho de acuerdo al contenedor padre */
   display: flex;
-  flex-direction: column; /* Para que el texto quede debajo de la imagen */
-  justify-content: center; /* Centra la imagen y el texto horizontalmente */
-  align-items: center; /* Centra la imagen y el texto verticalmente */
-  width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
-}
-
-.image-container img {
-  max-width: 100%; /* La imagen tomará el ancho máximo disponible */
-  height: auto; /* Mantiene la proporción de la imagen */
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente si es necesario */
   cursor: pointer; /* Cambia el cursor cuando se pasa por encima de la imagen */
 }
 
-.image-container h1 {
-  text-align: center; /* Centra el texto */
-  font-size: 2rem; /* Ajusta el tamaño del texto */
+.image-container img {
+  width: 100%;
 }

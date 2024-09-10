@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Text() {
+function Text(Changeall) {
   const phrases = [
     "Hola Mundo",
     "Max tiene síndrome",
@@ -11,32 +11,29 @@ function Text() {
 
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
 
-  const handleClick = () => {
-    // Obtener una frase aleatoria diferente de la actual
+  const cambiodetexto = () => {
     const nextPhrase = phrases[Math.floor(Math.random() * phrases.length)];
 
-    // Asegurarse de que la nueva frase sea diferente a la actual
     if (nextPhrase !== currentPhrase) {
       setCurrentPhrase(nextPhrase);
     } else {
-      // Si es la misma, llamar la función de nuevo
-      handleClick();
+      cambiodetexto();
     }
   };
 
   useEffect(() => {
-    // Añadir el evento click al body cuando el componente se monta
-    document.body.addEventListener("click", handleClick);
-
-    // Limpiar el evento al desmontar el componente
-    return () => {
-      document.body.removeEventListener("click", handleClick);
-    };
-  }, [currentPhrase]); // Dependencia para actualizar el efecto si cambia currentPhrase
+    cambiodetexto();
+  }, [Changeall]);
 
   return (
-    <div>
-      <h1>{currentPhrase}</h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <h1 className="text-xl m-4">{currentPhrase}</h1>
     </div>
   );
 }

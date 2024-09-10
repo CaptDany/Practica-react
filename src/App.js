@@ -14,13 +14,15 @@ const App = () => {
 
   return (
     <div
+      className=" flex flex-col justify-center  items-center"
       style={{
         backgroundColor: bgColor,
+        height: "100vh",
       }}
       onClick={handlePageClick}
     >
-      <Image refreshTrigger={refreshTrigger} />
-      <Text refreshTrigger={refreshTrigger} />
+      <Image Changeall={refreshTrigger} />
+      <Text changeall={refreshTrigger} />
     </div>
   );
 };
