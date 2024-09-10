@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
-const mongoURI = process.env.MONGO_URI;
+const mongoURI = 'mongodb://localhost:27017/Phrases';
 const cors = require("cors");
 const ImageData = require("./models/ImageData");
 
