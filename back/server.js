@@ -13,12 +13,9 @@ const mongoURI = "mongodb://localhost:27017"; // Coloca la URI entre comillas
 
 // Conectar a MongoDB
 mongoose
-  .connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(mongoURI, {})
   .then(() => {
-    console.log("Connected to MongoDB Atlas");
+    console.log("Connected to MongoDB");
   })
   .catch((err) => {
     console.error("Error connecting to MongoDB Atlas:", err);
