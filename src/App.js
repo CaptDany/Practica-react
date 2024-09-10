@@ -16,9 +16,6 @@ const App = () => {
     <div
       style={{
         backgroundColor: bgColor,
-        minHeight: "100vh",
-        textAlign: "center",
-        padding: "50px",
       }}
       onClick={handlePageClick}
     >

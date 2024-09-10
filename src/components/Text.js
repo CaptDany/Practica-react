@@ -35,14 +35,7 @@ function Text() {
   }, [currentPhrase]); // Dependencia para actualizar el efecto si cambia currentPhrase
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div>
       <h1>{currentPhrase}</h1>
     </div>
   );
